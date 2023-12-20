@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="DispatcherQueueSampleApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:DispatcherQueueSampleApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <StackPanel
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <Button
+            Command="{x:Bind ViewModel.UpdateTextCommand, Mode=OneWay}"
+            Content="Update text" />
+        <TextBlock
+            x:Name="DateTimeTextBlock"
+            Text="{x:Bind ViewModel.Text, Mode=OneWay}" />
+    </StackPanel>
+</Page>
